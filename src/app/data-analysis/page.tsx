@@ -33,4 +33,51 @@ export default function DataAnalysisPage() {
         </p>
       </header>
 
-   
+      <div className="space-y-12">
+        {analysisProjects.map((item, index) => (
+          <div key={index} className="bg-slate-800 p-8 md:p-12 rounded-3xl border border-slate-700 hover:border-blue-500 transition-all duration-300 shadow-xl">
+            <div className="flex flex-col gap-6">
+              {/* 文字內容區 */}
+              <div className="w-full">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-slate-100">{item.title}</h2>
+                <p className="text-slate-400 leading-relaxed text-lg mb-6 max-w-4xl">{item.desc}</p>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  {item.tags.map(tag => (
+                    <span key={tag} className="bg-slate-700/50 text-slate-300 px-4 py-1.5 rounded-lg text-xs border border-slate-600">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* 圖片併排顯示區 */}
+              {item.images && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                  {item.images.map((imgUrl, imgIndex) => (
+                    <div key={imgIndex} className="flex flex-col">
+                      <div className="relative w-full h-[300px] rounded-2xl overflow-hidden border border-slate-600 bg-white/5 p-2 shadow-inner group">
+                        <Image
+                          src={imgUrl}
+                          alt={`${item.title} analysis ${imgIndex + 1}`}
+                          fill
+                          className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <p className="text-center text-slate-500 text-xs mt-3 italic font-light">
+                        {imgIndex === 0 ? "RFM 顧客價值位點圖 (ggplot2)" : "全台銷售地理分佈分析 (ggplot2)"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <footer className="mt-20 text-center text-slate-600 text-sm">
+        Data-driven insights for business excellence.
+      </footer>
+    </div>
+  );
+}

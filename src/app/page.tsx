@@ -45,4 +45,48 @@ export default function Home() {
         </section>
 
         {/* 區塊二：數據分析特色區塊 (導向 /data-analysis) */}
-        <section className="bg-slate-800 p-8 md:p-12 rounded-3xl text-white shadow-xl
+        <section className="bg-slate-800 p-8 md:p-12 rounded-3xl text-white shadow-xl">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1 text-left">
+              <span className="text-blue-400 font-bold tracking-widest text-sm uppercase">Data Analytics</span>
+              <h2 className="text-3xl font-bold mt-2 mb-4">數據分析專案作品集</h2>
+              <p className="text-slate-300 leading-relaxed mb-8 text-lg">
+                運用 R 語言進行數據清洗與建模，擅長將複雜的交易資料與會員行為轉化為直觀的圖表與趨勢，協助企業提出改善行銷方案
+              </p>
+              <Link href="/data-analysis" className="inline-block bg-white text-slate-900 px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition">
+                查看專案作品集 →
+              </Link>
+            </div>
+            <div className="flex-1 grid grid-cols-2 gap-4">
+              <div className="bg-slate-700 p-6 rounded-2xl text-center">
+                <div className="text-blue-400 font-bold text-2xl mb-1">MBA</div>
+                <div className="text-xs text-slate-400">商管專業背景</div>
+              </div>
+              <div className="bg-slate-700 p-6 rounded-2xl text-center">
+                <div className="text-green-400 font-bold text-2xl mb-1">Winner</div>
+                <div className="text-xs text-slate-400">教育部競賽冠軍</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm">
+            <span className="text-xs font-bold text-blue-500 uppercase">國際視野</span>
+            <h3 className="text-2xl font-bold mt-2 mb-3">法國 MBS 交換經驗</h3>
+            <p className="text-slate-600">赴法國 Montpellier Business School 交換半年，修讀 Business Management。</p>
+          </div>
+          <div className="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm">
+            <span className="text-xs font-bold text-blue-500 uppercase">實務經驗</span>
+            <h3 className="text-2xl font-bold mt-2 mb-3">LINE 購物平台營運</h3>
+            <p className="text-slate-600">協助 LINE EC 部門進行平台營運、素材對接與異常排除。</p>
+          </div>
+        </div>
+      </main>
+
+      <footer className="py-12 text-center text-slate-400 text-sm">
+        © 2026 Developed by Chienyu. MBA, NSYSU.
+      </footer>
+    </div>
+  );
+}
