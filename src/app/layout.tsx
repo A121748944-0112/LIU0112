@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 // 這裡修改了 SEO 元數據，讓你的作品集在搜尋引擎上更專業
 export const metadata: Metadata = {
-  title: "Qianyu | SEO & Web Content Portfolio",
-  description: "專業 SEO 關鍵字佈局與前端開發作品集，展示單季營收 300 萬之實戰成就。",
+  title: "LIU CHIEN YU | Portfolio",
+  description: "劉芊妤個人作品集",
 };
 
 export default function RootLayout({

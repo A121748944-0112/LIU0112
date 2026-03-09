@@ -16,6 +16,12 @@ export default function SEOProjectsPage() {
             tags: ["營業額上升", "商業文案"]
         },
         {
+            title: "防護專家精選文章",
+            desc: "專業科普類型文章，替品牌業主實際轉換流量，最高累積達曝光總數42萬",
+            link: "https://protect.contenta.tw/",
+            tags: ["產品分析", "SEO 優化"]
+        },
+        {
             title: "精選 5 大熱門沙發椅推薦！特色、評價懶人包！",
             desc: "SEO 內容創作分享各種好物推薦排行，提升品牌在專業領域的搜尋權重。",
             link: "https://sofa.contenta.tw/3028/",
@@ -26,7 +32,8 @@ export default function SEOProjectsPage() {
             desc: "精選不同品牌推薦，成功登上 Google 搜尋首頁，替品牌帶來流量",
             link: "https://delicacy.contenta.tw/1968/",
             tags: ["品牌流量", "品牌排行分享"]
-        }
+        },
+
     ];
 
     return (
